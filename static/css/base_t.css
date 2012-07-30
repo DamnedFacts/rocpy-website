@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+body,html {
+    background:#331918 url(/static/img/body_bg.png) repeat 0 0;
+    margin:0;
+    padding:0;
+    color:#FFF;
+}
+h1 {
+    margin:0;
+}
+h2 {
+    margin:0 0 1em;
+}
+
+#header {
+    padding:5px 10px;
+    /*background:#ddd;*/
+    font-family: 'Ubuntu', sans-serif;
+}
+#pagetitle {
+    text-indent: 10em;
+	text-align: left;
+	text-transform: lowercase;
+	margin: 0;
+	padding: 0;
+}
+#logo {
+    width: 80px;
+    height: 150px;
+    text-indent: -1000em;
+    position: relative;
+    top: 25px;
+}
+#wrap {
+    width:750px;
+    margin:0 auto;
+    /*background:#99c;*/
+}
+#nav {
+	border-radius: 15px;
+    padding:5px 10px;
+    background:#c99;
+}
+#nav ul {
+    margin:0;
+    padding:0;
+}
+#nav li a {
+	text-decoration:none;
+    color:#FFF;
+}	
+#nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+	padding-right:15px;
+}
+#main {
+    float:left;
+    width:480px;
+    padding:10px;
+    /*background:#9c9;*/
+}
+#sidebar {
+    float:right;
+    width:230px;
+    padding:10px;
+    /*background:#99c;*/
+}
+#sidebar-block {
+	margin: 0px 0px 20px 0px;
+	border: 1px solid #00A060;
+}
+#footer {
+    clear:both;
+    padding:5px 10px;
+    /*background:#cc9;*/
+}
+#footer p {
+    margin:0;
+}
+* html #footer {
+    height:1px;
+}

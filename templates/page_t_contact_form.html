@@ -1,0 +1,78 @@
+{% extends "base_t.html" %}
+
+{% block header %}
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/page_t_contact_form.css') }}">
+{% endblock%}
+
+{% block content %}
+
+<!-- Reference: http://flask.pocoo.org/docs/patterns/wtforms/ -->
+<div id="page_wrapper">
+	<script type="text/javascript" src="{{ url_for('static', filename='js/turing.js') }}"></script>
+	
+	<form method="post" action="" name="contactform" id="contactform">
+		<table cellspacing="8" cellpadding="0" border="0">
+			<tr>
+				<td class="content" valign="top" align="right">
+					<span style="padding-top: 0pt; " class="Body">Name</span>
+				</td>
+				<td class="content">
+					<input name="flda" id="flda" type="text" size="45" maxlength="50" value="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="content" valign="top" align="right">
+					<span style="padding-top: 0pt; " class="Body">E-mail</span>
+				</td>
+				<td>
+					<input name="fldb" id="fldb" type="text" size="45" maxlength="50" value="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="content" valign="top" align="right">
+					<span style="padding-top: 0pt; " class="Body"> Subject</span>
+				</td>
+				<td>
+					<input name="fldc" id="fldc" type="text" size="45" maxlength="50" value="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="content" valign="top" align="right">
+					<span style="padding-top: 0pt; " class="Body">Message</span>
+				</td>
+				<td>
+					<textarea name="fldd" id="fldd" rows="8" cols="50" wrap="hard"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<table border="0">
+						<tr>
+							<td class="content">
+								<span style="padding-top: 0pt; " class="Body">
+									I understand that without a valid E-mail address I cannot be contacted.
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td height="20">
+								<div class="antispam1">
+									<input type="checkbox" name="antispam" id="antispam" />
+									<span style="padding-top: 0pt; ">I certify that this is not SPAM.</span>
+									<div class="antispam2"></div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" align="right"> </td>
+				<td><input type="submit" name="submit" value="Submit"/></td>
+			</tr>
+		</table>
+	</form>
+</div>
+
+{% endblock%}

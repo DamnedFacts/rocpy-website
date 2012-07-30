@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="{{ LANGUAGE_CODE }}">
+	<head>
+		<title>{{ site_title }} | {{ page_title }}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+		<link rel="shortcut icon" href="{{ url_for('static', filename = 'img/favicon.ico') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/base_t.css') }}">
+
+		<script src="{{ url_for('static', filename='js/jquery-1.7.2.min.js') }}"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi?key=YOUR_KEY_HERE"></script>
+		<script src="{{ url_for('static', filename = 'js/rocpy_calendar.js') }}"></script>
+		{% block header %}{% endblock %}
+	</head>
+
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<h1>
+					<a id="logo" href="http://www.rocpy.org/">
+						<img src="{{ url_for('static', filename = 'img/rockpython.png') }}" 
+						alt="RocPy Rochester Python Users Group" 
+						title="Click to return to RocPy homepage" 
+						width="64" 
+						height="75" /></a> 
+					<span id="title">RocPython</span>
+				</h1>
+				<h3 id="pagetitle">
+					{{ page_title }}
+				</h3>
+			</div>
+
+			<div id="nav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/events">Events</a></li>
+					<li><a href="/coding">Coding</a></li>
+					<li><a href="/contact">Contact</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				{% block content %}
+				<h2>Column 1</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+				{% endblock %}
+			</div>
+			<div id="sidebar">
+				{% block sidebar %}
+				<div id="sidebar-block">
+					<script src="http://www.reddit.com/r/RocPy/hot/.embed?limit=5&t=all&expanded=1" type="text/javascript"></script>
+				</div>
+				<div id="sidebar-block">
+					<iframe width="230" height="285" src="http://meetu.ps/gGV4P" frameborder="0"></iframe>
+				</div>
+				{% endblock %}
+			</div>
+			<div id="footer">
+				RocPy Python Users Group Copyright 2012
+			</div>
+		</div>
+	</body>
+
+
+</html>
